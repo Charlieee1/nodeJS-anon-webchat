@@ -1,0 +1,82 @@
+body, html {
+    background-color: #111c27;
+    margin: 0;
+}
+
+#text-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+#message-container {
+    flex-grow: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#message-empty {
+    flex-grow: 1;
+}
+
+#message-container>p {
+    margin: 5px;
+}
+
+#message-input-container {
+    background-color: #2f363d;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 10px;
+}
+
+#message-input {
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #444b51;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+}
+
+#message-input:enabled {
+    border: none;
+}
+
+#message-input::placeholder {
+    color: lightgray;
+}
+
+#send-button {
+    background-color: #444b51;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 2px 10px;
+    font-size: 20px;
+}
+
+#copyright {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 2vh;
+    position: absolute;
+    top: -1.5ch;
+    right: 0;
+    padding-right: 5px;
+    padding-top: 3px;
+    font-family: "Nunito";
+}

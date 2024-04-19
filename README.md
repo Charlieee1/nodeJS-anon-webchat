@@ -1,2 +1,2 @@
 # nodeJS-anon-webchat
-A commision I received to create a basic anonymous webchat with an account management system
+A web-based chat app that includes a basic account management system.
