@@ -8,4 +8,4 @@ git clone https://github.com/Charlieee1/nodeJS-anon-webchat.git
 cd nodeJS-anon-webchat
 npm install
 ```
-To start the server, run `start_server.bat` or `start_server.sh`, accordingly.
+To start the server, run `start_server.bat` or `start_server.sh`.

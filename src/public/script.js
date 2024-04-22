@@ -77,9 +77,9 @@ function receiveMessage(message, override = false) {
 }
 
 async function login() {
-    let user = prompt("Login - user: ");
-    let pass = prompt("Login - password: ");
-    ws.send(`login ${user} ${pass}`);
+    let user = prompt("Login - user: ").replace(/ /g, "_").replace(/^_+|_+$/g, "");
+    let pass = prompt("Login - password: ").replace(/ /g, "_").replace(/^_+|_+$/g, "");
+    ws.send(`login ${user} ${pass}`.replace(/_* _*|_+$/g, " "));
     let result = await waitForMessage("login");
     console.log(result);
     if (result == "login true") {
