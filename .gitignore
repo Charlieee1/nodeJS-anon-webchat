@@ -130,7 +130,7 @@ dist
 .pnp.*
 
 # storage
-storage/
+storage
 storage/*
-storage/messages.text
+storage/messages.txt
 storage/users.json
