@@ -131,6 +131,7 @@ dist
 
 # storage
 storage
+storage/
 storage/*
 storage/messages.txt
 storage/users.json
