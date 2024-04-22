@@ -2,7 +2,7 @@
 const logger = require("./logger");
 logger("Started!");
 
-const handleRequest = require("./requestHandler");
+const { handleRequest, loadMessages } = require("./requestHandler");
 
 // Print IP address
 const os = require("os");
@@ -52,3 +52,5 @@ sockserver.on("connection", async ws => {
 		handleRequest(ws, data, sendDataToEachClient);
 	});
 });
+
+loadMessages();

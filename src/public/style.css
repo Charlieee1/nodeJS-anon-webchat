@@ -5,15 +5,19 @@ body, html {
 
 #text-container {
     min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+    overflow-y:auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
-    gap: 20px;
+    gap: 10px;
 }
 
 #message-container {
+    overflow-y:auto;
     flex-grow: 1;
     color: white;
     display: flex;
@@ -26,6 +30,11 @@ body, html {
 
 #message-container>p {
     margin: 5px;
+    color: #AAA;
+}
+
+#message-container>p>b {
+    color: white;
 }
 
 #message-input-container {
