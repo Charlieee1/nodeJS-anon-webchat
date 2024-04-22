@@ -5,6 +5,11 @@ const { checkLogin } = require("./userManager");
 
 const messagesFile = path.join("./storage", "messages.txt");
 
+// Creating messages file if it doesn't exist
+if (!fs.existsSync(messagesFile)) {
+	fs.writeFileSync(messagesFile, "");
+}
+
 var messages = [];
 
 function loadMessages() {

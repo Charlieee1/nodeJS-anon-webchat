@@ -1,6 +1,11 @@
 const fs = require("fs");
 const userFile = "./storage/users.json"
 
+// Creating users file if it doesn't exist
+if (!fs.existsSync(userFile)) {
+	fs.writeFileSync(userFile, "");
+}
+
 var users = null;
 fs.readFile(userFile, (err, data) => {
     users = JSON.parse(data);

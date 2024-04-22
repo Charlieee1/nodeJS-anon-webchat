@@ -1,6 +1,13 @@
+const fs = require('fs');
+
 // Set up logger
 const logger = require("./logger");
 logger("Started!");
+
+// Creating storage directory if it doesn't exist
+if (!fs.existsSync("./storage")) {
+	fs.mkdirSync("./storage");
+}
 
 const { handleRequest, loadMessages } = require("./requestHandler");
 
@@ -29,6 +36,7 @@ webserver.listen(3000, () => console.log("Listening on 3000"));
 
 // Web socket
 const { WebSocketServer } = require("ws");
+const { fstat } = require("fs");
 const sockserver = new WebSocketServer({ port: 443 });
 
 function sendDataToEachClient(data) {
